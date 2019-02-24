@@ -4,13 +4,14 @@ This is the development repository of a simple sales program, at a time when I t
 
 In hopes to one day work for a nuclear plant as a software engineer, I decided to design this sales application as part of my final project in Procedural Programming  
 
-Programming Language: C
-Year: 2014
-Project Owner: Wilhelmina Nekoto
-Supported by: Steven Mwinga - Telecom Namibia.  
-Supervised by: Mike Abia - Polytechnic of Namibia.
 
-Contents
+* Programming Language: C
+* Year: 2014 <br>
+* Project Owner: Wilhelmina Nekoto
+* Supported by: Steven Mwinga - Telecom Namibia.  
+* Supervised by: Mike Abia - Polytechnic of Namibia.
+
+### Contents
 The main code is contained in the Main_programs folder.
 here the header file is contained is included in the Mainfile.
 
