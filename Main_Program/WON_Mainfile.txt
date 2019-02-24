@@ -1,0 +1,326 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include"HeaderFile.h"
+#include<string.h>
+/*Client Structure for generating electricity */
+struct client
+{
+	char companyName[30];
+	char email[30];
+	int order;
+};
+typedef struct client cl;
+/*Buyers/clients Structure for purchase of Uranium alone*/
+struct Buyer
+{
+	char clientName[30];
+	char clientemail[30];
+	char clientNationality[30];
+	int clientorder;
+};
+typedef struct Buyer by;
+int main()
+{
+	/*variable declaration*/
+	const A = 4.00;
+	const B = 3.00;
+	const C = 2.00;
+	const pcost = 10;
+	const mcost = 20;
+	const markup = 0.1;
+	char string_0[256];
+	char *pos;
+	float amount;
+	char amountStr[8];
+	char seek[12];
+	float answo;
+	int aha;
+	/*double amount;*/
+	int k = 0;
+	int i, count = 0;
+	/*const order=2;*/
+	/*int order;*/
+	float treed;
+	int summ;
+	int KG;
+	double Ucost;
+	char file[100];
+	int number;
+	int option;
+	int ord;
+	char Nat;
+	int profit;
+	FILE *fp;
+	cl c;
+	by b;
+	char user[3][30];/*position 0 has username, 1 has password, 2 has user type*/
+	/*char user[8];*/
+	int password, valid, Try = 1;
+	do
+	{
+		printf("Control Panel\n");
+		/*printf("Username :\n ");*/
+		/*fflush(stdin);*/
+		scanf(user[0]);
+		printf("Password : \n");
+		scanf("%i", &password);
+		if (password != 888 && user[0] != "geekz" )
+		{
+			printf("Invalid Username/Password Entered.");
+			valid = 0;
+			Try += 1;
+		}
+		else
+			valid = 1;
+	}
+	while (!valid && Try <= 3 );
+	if (Try > 3)
+		printf("\n\t\t\tMaximum 3 try only!");
+	else
+		printf("\n\n\t\t\tAccess Approved.\n");
+	/*menu();*/
+	display();
+	displayMenu1(); /*Users Menu*/
+	scanf("%d", &option);
+	switch (option)
+	{
+	case 1:
+		do
+		{
+			printf("Control Panel\n");
+			/*printf("Username :\n ");
+			fflush(stdin);
+			scanf(user[0]);*/
+			printf("Password : \n");
+			scanf("%i", &password);
+			if (password != 1107 && user[0] != "clerk" )
+			{
+				printf("Invalid Username/Password Entered.");
+				valid = 0;
+				Try += 1;
+			}
+			else
+				valid = 1;
+		}
+		while (!valid && Try <= 3 );
+		if (Try > 3)
+			printf("\n\t\t\tMaximum 3 try only!");
+		else
+			printf("\n\n\t\t\tAccess Approved.\n");
+		displayMenu2();/* Clerks Menu*/
+		scanf("%d", &option);
+		if (option == 1)
+		{
+			/*opening a file*/
+			fp = fopen("orderdetails.txt", "a");
+			if (fp == NULL)
+			{
+				printf("I could not open orderdetails.txt for writing.\n");
+				exit(0);
+			}
+			/* Capturing Clients details*/
+			printf("************ Capture Clients Details **************\n");
+			printf("enter  Client name\n");
+			scanf("%s", &c.companyName);
+			printf("enter  Client email Address\n");
+			scanf("%s", &c.email);
+			printf("enter Client order\n");
+			scanf("%d", &c.order);
+			/* Displaying Clients details*/
+			printf("*************The clients details are:*************\n");
+			printf("Client_Name\tClient_Email\tOrder_P/M\n");
+			printf("%s\t       %s \t         %d\n\n", c.companyName, c.email, c.order);
+			printf("*************total amount to be Paid**************\n");
+			printf("N$%.2f\n", UraniumCost(pcost, mcost, c.order));
+			/*write to a file*/
+			fprintf(fp, "ClientName: %s\t, Client Email: %s\t, Client Order:N$ %d\t, Total to be paid:N$ %2.f\n", c.companyName, c.email, c.order, UraniumCost(pcost, mcost, c.order));
+			fclose(fp);
+			/*option1();
+			scanf("%d",&option);
+			if(option==1){
+			displayMenu2();
+			scanf("%d",&option);}
+			else if (option==2)
+			{display();
+			scanf("%d",&option);}*/
+			break;
+		}
+		else if (option == 2)
+		{
+			/*opening a file*/
+			fp = fopen("buyUranium.txt", "a");
+			if (fp == NULL)
+			{
+				printf("I could not open orderdetails.txt for writing.\n");
+				exit(0);
+			}
+			printf("************ Capture Clients Details **************\n");
+			printf("enter  Client name\n");
+			scanf("%s", &b.clientName);
+			printf("enter  Client email Address\n");
+			scanf("%s", &b.clientemail);
+			printf("enter Clients Nationality\n");
+			scanf("%s", &b.clientNationality);
+			printf("enter Number of Kilograms to be purchased\n");
+			scanf("%d", &b.clientorder);
+			/* Displaying Clients details*/
+			printf("*************The clients details are:*************\n");
+			printf("Client_Name\tClient_Email\tNationality\tQuantity\n");
+			printf("%s\t     %s\t    %s\t      %dKg\n", b.clientName, b.clientemail, b.clientNationality, b.clientorder);
+			printf("The Total Amount of uranium to be paid is:N$%.2f\n", UraniumCost(mcost, pcost, b.clientorder));
+			fprintf(fp, "ClientName: %s\t, Client Email: %s\t, ClientNationality: %s\t, clientorder: %d\t, Total to be paid:N$ %2.f\n",
+			        b.clientName, b.clientemail, b.clientNationality, b.clientorder, UraniumCost(mcost, pcost, b.clientorder));
+			/*This part of the code will work best say one wanted  to use different ore of uranium*/
+			/*--------------------------------------------------------------------------------------*/
+			/*Display Uranium Grades*/
+			/*	displayGrades();
+				scanf("%d", &option);
+				printf("Please Select Uranium Grade you would like to purchase");
+				/*switch (option)
+				{
+				case 1:
+					if (option == 1)
+					{*/
+			/*printf("The Cost of Uranium per P/Kg is:%d\n", A);
+			-----------------------------------------------------------------------------------------------*/
+			/*--------------------------------------------------------------------------------------------}
+			else if (option == 2)
+			{
+				printf("The Cost of Grade B per P/Kg:%d\n", B);
+				printf("The Total Amount of uranium to be purchased is:%.2f\n", UraniumCost(B, b.clientorder));
+			}
+			else if (option == 3)
+			{
+				printf("The Cost of Grade C per P/Kg is:%d\n", C);
+				UraniumCost(C, b.clientorder);
+				printf("The Total Amount of uranium to be purchased is:%.2f\n", UraniumCost(C, b.clientorder));
+				;
+			}
+			}*/
+			fclose(fp);
+			break;
+		}
+	case 2:
+		/* prompt for password*/
+		do
+		{
+			printf("Control Panel\n");
+			scanf(user[0]);
+			printf("Password : \n");
+			scanf("%i", &password);
+			if (password != 9311 && user[0] != "clerk" )
+			{
+				printf("Invalid Username/Password Entered.");
+				valid = 0;
+				Try += 1;
+			}
+			else
+				valid = 1;
+		}
+		while (!valid && Try <= 3 );
+		if (Try > 3)
+			printf("\n\t\t\tMaximum 3 try only!");
+		else
+			printf("\n\n\t\t\tAccess Approved.\n");
+		/* ----------------------------------------- display managers menu---------------------------*/
+		displayMenu3();
+		scanf("%d", &option);
+		if (option == 1)
+		{
+			static const char filename[] = "orderdetails.txt";
+			FILE *file = fopen ( filename, "r" );
+			if ( file != NULL )
+			{
+				char line [ 128 ]; /* or other suitable maximum line size */
+				while ( fgets ( line, sizeof line, file ) != NULL ) /* read a line */
+				{
+					fputs ( line, stdout ); /* write the line */
+				}
+				fclose ( file );
+			}
+			else
+			{
+				perror ( filename ); /* why didn't the file open */
+			}
+			break;
+		}
+		/*option 2 which is to determine the profit*/
+		else if (option == 2)
+		{
+			/*---------------------------------this method reads line by line as opposed to grasping the value from file------------
+			static const char filename[] = "orderdetails.txt";
+			FILE *file = fopen ( filename, "r" );
+			if ( file != NULL )
+			{
+				char line [ 128 ]; /* or other suitable maximum line size
+			while ( fgets ( line, sizeof line, file ) != NULL , sizeof(line)) /* read a line
+			{
+			}
+			fclose ( file );
+			}
+			else
+			{
+			perror ( filename );  why didn't the file open?
+			}*/
+			/*printf("please enter clients order\n");
+			scanf("%d",&amountStr);
+			printf("the profit made on %s is: %.2lf\n",seek);
+			------------------------------------------------------------------------------------------------
+			Seasrching for value in file
+			-----------------------------------------------------------------------------------------------*/
+			char line [ 300 ]; /* or other suitable maximum line size */
+			printf("enter client name\n");
+			scanf("%s", &seek);
+			fp = fopen("orderdetails.txt", "r");
+			if ( fp != NULL )
+			{
+				char line [ 300 ]; /* or other suitable maximum line size */
+				while ( fgets ( line, sizeof line, fp) != NULL , sizeof(line)) /* read a line */
+				{
+					pos = strstr(line, seek);
+					if (pos)
+					{
+						fputs ( line, stdout ); /* write the line */
+						pos = strstr(line, "$");
+						for (i = 0;i < 300;i++)
+						{
+							if (line[i] == '$')
+							{
+								aha = i;
+								printf("character position is %d\n", aha);
+							}
+							if (i > aha && line[i] != ' ')
+							{
+								amountStr[k] = line[i];
+								k = k + 1;
+							}
+						}
+						for (i = k; i < 8;i++)
+						{
+							amountStr[i] = 'e';
+						}
+					/*Calculating Profi	   ----------------t*--------------------------------------/
+						printf("cost is: %s\n", amountStr);
+						printf("enter total amount as displayed on screen\n");
+						scanf("%f", &amount);
+						printf("enter total order as displayed on screen\n");
+						scanf("%f", &ord);
+						/*calculating profit*/
+						profit = amount - (mcost + pcost);
+						printf("The profit is:N$%d\n", profit);
+						break;
+					}
+				}
+				fclose ( fp );
+			}
+			else
+			{
+				perror ( line ); /* why didn't the file open? */
+			}
+		}
+	default:
+		printf("return to System");
+	}
+	return 0;
+}
+

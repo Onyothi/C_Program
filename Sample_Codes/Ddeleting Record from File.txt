@@ -1,0 +1,103 @@
+    I Think this code will help you to solve your problem:
+    Add Some Student:
+    #include<stdio.h>
+    #include<stdlib.h>
+    #include<string.h>
+    #include<io.h>
+    #include<fcntl.h>
+    struct student
+    {
+    char name[20];
+    char semCode[10];
+    int enrollNo;
+    int assignSub;
+    int marks;
+    int attendence;
+    };
+    struct student var;
+    FILE *ptr;
+    void refresh()
+    {
+    fclose(ptr);
+    ptr = fopen("c:\\file.txt","a+");
+    }
+    void addStudentRecord()
+    {
+    refresh();
+    fflush(stdin);
+    printf("Enter name:\n");
+    gets(var.name);
+    fflush(stdin);
+    printf("Enter Semester Code:\n");
+    gets(var.semCode);
+    fflush(stdin);
+    printf("Enter Enrollment Number:\n");
+    scanf("%d",&var.enrollNo);
+    var.assignSub=0;
+    var.marks=-1;
+    fwrite(&var,sizeof(struct student),1,ptr);
+    printf("Data Entered Successfully\n");
+    printf("Press any key..");
+    refresh();
+    getch();
+    }
+    When You want to delete the record:
+    void deleteStudentRecord()
+    {
+    int enrollNo;
+    int counter=0;
+    FILE *ptr2 = fopen("c:\\file2.txt","a");
+    int records = getNoOfRecords();
+    refresh();
+    fflush(stdin);
+    printf("Enter Enrollment Number:\n");
+    scanf("%d",&enrollNo);
+    while(counter!=records)
+    {
+    fread(&var,sizeof(struct student),1,ptr);
+    if(var.enrollNo==enrollNo)
+    {
+    }
+    else
+    {
+    fwrite(&var,sizeof(struct student),1,ptr2);
+    }
+    counter++;
+    }
+    fcloseall();
+    remove("c:\\file.txt");
+    rename("c:\\file2.txt","c:\\file.txt");
+    printf("Press any key..");
+    getch();
+    }
+    void main()
+    {
+    int a=0;
+    ptr = fopen("c:\\file.txt","a+");
+    while(a!=2)
+    {
+    system("cls");
+    printf("Select an Option:\n");
+    printf("1.Add Student Record\n");
+    Printf("2.Delete Student Record\n");
+    scanf("%d",&a);
+    switch(a)
+    {
+    case 1:
+    addStudentRecord();
+    break;
+    case 2:
+    updateStudentRecord();
+    break;
+    case 3:
+    deleteStudentRecord();
+    break;
+    default:
+    printf("Invalid Option\n");
+    break;
+    }
+    }
+    }
+    2. rename file:
+    rename("c:\\file2.txt","c:\\file.txt");
+

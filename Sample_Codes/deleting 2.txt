@@ -1,0 +1,22 @@
+01	void deleteCustomer()
+02	{
+03	  customer deleteC[100];
+04	 
+05	  string tempId;
+06	   
+07	  for(int i=0; i<100; i++)
+08	  {
+09	    if(strcmp(deleteC[i].id,tempId) == 0)
+10	    {
+11	       
+12	      deleteC[i].id ="NULL";
+13	      deleteC[i].name ="NULL";
+14	      deleteC[i].address ="NULL";
+15	      deleteC[i].phone ="NULL";
+16	      deleteC[i].email ="NULL";
+17	 
+18	    }//end if
+19	 
+20	  }//end for
+21	   
+22	}// end deleteCustomer

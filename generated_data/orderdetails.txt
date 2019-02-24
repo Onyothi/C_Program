@@ -1,0 +1,35 @@
+
+ClientName: 3	, Client Email: ki3	, Client Order: 3	, Total to be paid: #99
+ClientName: paulus	, Client Email: pau@.com	, Client Order: 5	, Total to be paid: #165
+ClientName: martin	, Client Email: martin	, Client Order: 145	, Total to be paid: 4785
+ClientName: mina	, Client Email: mina@gmail.com	, Client Order: 120	, Total to be paid: N$ 3960
+ClientName: milak	, Client Email: milak@gmai.com	, Client Order: N$ 3	, Total to be paid: N$ 99
+ClientName: kelly	, Client Email: kells@gmail.com	, Client Order:N$ 2	, Total to be paid:N$ 66
+ClientName: weirdo	, Client Email: weir@gmail.com	, Client Order:N$ 4	, Total to be paid:N$ 132
+ClientName: killaB	, Client Email: Lab@.com	, Client Order:N$ 4	, Total to be paid:N$ 132
+ClientName: Erastus	, Client Email: Erra@gmail.com	, Client Order:N$ 5	, Total to be paid:N$ 165
+ClientName: kl	, Client Email: po	, Client Order:N$ 1	, Total to be paid:N$ 33
+ClientName: John	, Client Email: Jdoe@gmail.com	, Client Order:N$ 10	, Total to be paid:N$ 330
+ClientName: Hans	, Client Email: Hans@gmail.com	, Client Order:N$ 4	, Total to be paid:N$ 132
+ClientName: Merlyn	, Client Email: nj@gn.com	, Client Order:N$ 2	, Total to be paid:N$ 66
+ClientName: Queen	, Client Email: Q@man.gmail	, Client Order:N$ 5	, Total to be paid:N$ 165
+ClientName: r	, Client Email: g	, Client Order:N$ 1996827823	, Total to be paid:N$ 65895317504
+ClientName: Monster.com	, Client Email: Mon@yahoo.com	, Client Order:N$ 2	, Total to be paid:N$ 66
+ClientName: d	, Client Email: s	, Client Order:N$ 1996827823	, Total to be paid:N$ 65895317504
+ClientName: re	, Client Email: sww	, Client Order:N$ 12	, Total to be paid:N$ 396
+ClientName: d	, Client Email: d	, Client Order:N$ 3	, Total to be paid:N$ 99
+ClientName: u	, Client Email: z	, Client Order:N$ 2	, Total to be paid:N$ 66
+ClientName: l	, Client Email: a	, Client Order:N$ 1	, Total to be paid:N$ 33
+ClientName: s	, Client Email: q@gmail.com	, Client Order:N$ 3	, Total to be paid:N$ 99
+ClientName: w	, Client Email: as	, Client Order:N$ 2	, Total to be paid:N$ 66
+ClientName: chloe	, Client Email: cloe@gmail.com	, Client Order:N$ 3	, Total to be paid:N$ 99
+ClientName: tempo	, Client Email: tem@yahoo.com	, Client Order:N$ 2	, Total to be paid:N$ 66
+ClientName: kolleen	, Client Email: Kee@gmail.com	, Client Order:N$ 2	, Total to be paid:N$ 66
+ClientName: mina	, Client Email: mina@gmail.com	, Client Order:N$ 500	, Total to be paid:N$ 16500
+ClientName: killian	, Client Email: killian@yahoo.com'	, Client Order:N$ 125	, Total to be paid:N$ 4125
+ClientName: nini	, Client Email: nini@gmail.com	, Client Order:N$ 250	, Total to be paid:N$ 8250
+ClientName: mina	, Client Email: momo@gmail.com	, Client Order:N$ 1478	, Total to be paid:N$ 48774
+ClientName: lulu	, Client Email: lulu_mina	, Client Order:N$ 145	, Total to be paid:N$ 4785
+ClientName: julieth	, Client Email: ju@gmail.com	, Client Order:N$ 123	, Total to be paid:N$ 4059
+ClientName: kavango	, Client Email: kbb@iway.com	, Client Order:N$ 9	, Total to be paid:N$ 297
+ClientName: samantha	, Client Email: sammm@gmail.com	, Client Order:N$ 12	, Total to be paid:N$ 396

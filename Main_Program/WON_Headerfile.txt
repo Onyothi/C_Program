@@ -1,0 +1,67 @@
+#include<stdio.h>
+void display()
+{
+	printf("***********\n");
+	printf("****WELCOME TO NYOTHI'S NUCLEAR CENTRE****\n");
+	printf("********************************************\n");
+}
+void displayMenu1()
+{
+	printf(" Login as :\n");
+	printf("1.Clerk\n");
+	printf("2.Manager\n");
+}
+void displayMenu2()
+{
+	printf("Welcome Clerk\n");
+	printf("1. take Electricity order\n");
+	printf("2. Sell Uranium\n");
+}
+void displayMenu3()
+{
+	printf(".WELCOME Operational manager\n");
+	printf("1. view all records\n");
+	printf("2. calculate Profit\n");
+}
+float sum3(a)
+{
+	float ans;
+	const mcost = 1500;
+	const pcost = 1000;
+	ans = (a * mcost * pcost) * 0.35;
+	return ans;
+}
+void displayGrades()
+{
+	printf("************ Uranium Grades **************\n");
+	printf("1. Grade A\n");
+	printf("2. Grade B\n");
+	printf("3. Grade C\n");
+}
+/*formula for calculating the cost of Uranium*/
+float UraniumCost(a, b, order)
+{
+	float Urcost;
+	/*float mcost=1000;
+	float pcost=2000;*/
+	Urcost = (a + b + (a+b)*0.10)*order;
+	/*Urcost=(mcost+pcost+(mcost+pcost)*0.10)*a;*/
+	return Urcost;
+}
+/* Formula for determining the profit */
+float Pprofit(x, a, b)
+{
+	float profit;
+	profit=(x-(a+b));
+	return profit;
+}
+
+
+void option1()
+{
+	printf("************ Do you wish to return to your original menu?\n **************\n");
+	printf("1.Yes\n");
+	printf("2. No\n");
+
+}
+

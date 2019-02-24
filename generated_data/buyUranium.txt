@@ -1,0 +1,18 @@
+
+ClientName: ms	, Client Email: ds	, ClientNationality: f	, clientorder: 100	, Total to be paid: 32000
+ClientName: s	, Client Email: c	, ClientNationality: s	, clientorder: 20	, Total to be paid: 6400
+ClientName: gfr	, Client Email: ds	, ClientNationality: bv	, clientorder: 100	, Total to be paid: 3200000
+ClientName: loko	, Client Email: lolo@.com	, ClientNationality: mALI	, clientorder: 500	, Total to be paid: 33000000
+ClientName: kill	, Client Email: kil@.com	, ClientNationality: hindu	, clientorder: 200	, Total to be paid:  0
+ClientName: killian	, Client Email: kill@gmail.com	, ClientNationality: malawi	, clientorder: 3	, Total to be paid: 99
+ClientName: loki	, Client Email: loki@gmail.com	, ClientNationality: Namibian	, clientorder: 3	, Total to be paid: 99
+ClientName: Ben	, Client Email: Ben@gmail.com	, ClientNationality: Malawian	, clientorder: 5	, Total to be paid:N$ 165
+ClientName: Hans	, Client Email: Hans@gmail.com	, ClientNationality: Kenya	, clientorder: 3	, Total to be paid:N$ 99
+ClientName: a	, Client Email: s	, ClientNationality: d	, clientorder: 2	, Total to be paid:N$ 66
+ClientName: Mostr	, Client Email: Mo@fr.com	, ClientNationality: namibian	, clientorder: 2	, Total to be paid:N$ 66
+ClientName: lk	, Client Email: sd	, ClientNationality: de	, clientorder: 2	, Total to be paid:N$ 66
+ClientName: w	, Client Email: w	, ClientNationality: e	, clientorder: 2	, Total to be paid:N$ 66
+ClientName: red	, Client Email: re@gmail.com	, ClientNationality: kli	, clientorder: 3	, Total to be paid:N$ 99
+ClientName: kji	, Client Email: fd	, ClientNationality: er	, clientorder: 2	, Total to be paid:N$ 66
+ClientName: alexander	, Client Email: alex@gmail.com	, ClientNationality: namibian	, clientorder: 123	, Total to be paid:N$ 4059
+ClientName: sophie	, Client Email: so@yahoo.com	, ClientNationality: angolan	, clientorder: 100	, Total to be paid:N$ 3300
